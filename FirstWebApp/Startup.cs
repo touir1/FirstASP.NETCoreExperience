@@ -33,6 +33,11 @@ namespace FirstWebApp
                         await context.Response.WriteAsync("from my middleware");
                         logger.LogInformation("Request Handled");
                     }
+                    else if(context.Request.Path.StartsWithSegments("/exception"))
+                    {
+                        logger.LogInformation("testing Exception");
+                        throw new System.Exception("test exception");
+                    }
                     else
                     {
                         await next(context);

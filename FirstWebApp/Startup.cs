@@ -51,6 +51,8 @@ namespace FirstWebApp
                 Path = "/welcome",
             });
 
+            app.UseFileServer();
+
             app.Run(async (context) =>
             {
                 var greeting = greeter.getGreetingOfTheDay();

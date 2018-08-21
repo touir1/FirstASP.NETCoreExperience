@@ -13,51 +13,26 @@ namespace FirstWebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IGreeter, Greeter>();
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IGreeter greeter, ILogger<Startup> logger)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IGreeter greeter,
+            ILogger<Startup> logger)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
-            app.Use(next =>
-            {
-                return async context =>
-                {
-                    logger.LogInformation("Request incoming");
-                    if (context.Request.Path.StartsWithSegments("/mymiddleware"))
-                    {
-                        await context.Response.WriteAsync("from my middleware");
-                        logger.LogInformation("Request Handled");
-                    }
-                    else if(context.Request.Path.StartsWithSegments("/exception"))
-                    {
-                        logger.LogInformation("testing Exception");
-                        throw new System.Exception("test exception");
-                    }
-                    else
-                    {
-                        await next(context);
-                        logger.LogInformation("Response outgoing");
-                    }
-                };
-            });
+            app.UseStaticFiles();
 
-            app.UseWelcomePage(new WelcomePageOptions
-            {
-                Path = "/welcome",
-            });
-
-            app.UseFileServer();
+            app.UseMvcWithDefaultRoute();
 
             app.Run(async (context) =>
             {
                 var greeting = greeter.getGreetingOfTheDay();
                 await context.Response.WriteAsync(greeting);
-                logger.LogInformation("from app.Run -> greeting");
             });
         }
     }

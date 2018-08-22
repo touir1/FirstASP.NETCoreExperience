@@ -1,10 +1,15 @@
-﻿namespace FirstWebApp.Controllers
+﻿using FirstWebApp.Models;
+using Microsoft.AspNetCore.Mvc;
+
+namespace FirstWebApp.Controllers
 {
-    public class HomeController
+    public class HomeController : Controller
     {
-        public string Index()
+        public IActionResult Index()
         {
-            return "Hello from the HomeController :D";
+            var model = new Restaurant() { Id = 1, Name = "My Pizza restaurant" };
+            return new ObjectResult(model);
+            //return Content("Hello from the HomeController :D");
         }
     }
 }

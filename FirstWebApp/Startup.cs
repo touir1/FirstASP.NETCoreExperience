@@ -43,7 +43,7 @@ namespace FirstWebApp
         private void ConfigureRoutes(IRouteBuilder routeBuilder)
         {
             routeBuilder.MapRoute("Default",
-                "{controller=Home}/{action=Index}");
+                "{controller=Home}/{action=Index}/{id?}");
         }
     }
 }

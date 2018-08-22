@@ -13,6 +13,9 @@
             <tr>
                 <td>@restaurant.Id</td>
                 <td>@restaurant.Name</td>
+                <td><a href="/home/details/@restaurant.Id">A HTML Tag</a></td>
+                <td>@Html.ActionLink("ActionLink","Details",new { id=restaurant.Id})</td>
+                <td><a asp-action="Details" asp-route-id="@restaurant.Id">Tag helper</a></td>
             </tr>
         }
     </table>

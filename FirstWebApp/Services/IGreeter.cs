@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
-namespace FirstWebApp
+namespace FirstWebApp.Services
 {
     public interface IGreeter
     {

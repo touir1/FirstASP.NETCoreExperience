@@ -34,7 +34,7 @@ namespace FirstWebApp
 
             app.Run(async (context) =>
             {
-                var greeting = greeter.getGreetingOfTheDay();
+                var greeting = greeter.GetGreetingOfTheDay();
                 context.Response.ContentType = "text/plain";
                 await context.Response.WriteAsync(greeting);
             });

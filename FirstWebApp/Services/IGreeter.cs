@@ -4,7 +4,7 @@ namespace FirstWebApp.Services
 {
     public interface IGreeter
     {
-        string getGreetingOfTheDay();
+        string GetGreetingOfTheDay();
     }
 
     public class Greeter : IGreeter
@@ -16,7 +16,7 @@ namespace FirstWebApp.Services
             _configuration = configuration;
         }
 
-        public string getGreetingOfTheDay()
+        public string GetGreetingOfTheDay()
         {
             return "Greeting from Greeter : IGreeter -> getGreetingOfTheDay()\n" +
                 "using appsettings Greeting value: "+_configuration["Greeting"];

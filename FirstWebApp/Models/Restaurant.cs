@@ -9,6 +9,7 @@ namespace FirstWebApp.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public CuisineTypes Cuisine { get; set; }
 
     }
 }

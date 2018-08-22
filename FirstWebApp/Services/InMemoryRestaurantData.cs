@@ -18,6 +18,14 @@ namespace FirstWebApp.Services
             };
         }
 
+        public Restaurant Add(Restaurant restaurant)
+        {
+            restaurant.Id = _restaurants.Max(r => r.Id) + 1;
+            _restaurants.Add(restaurant);
+
+            return restaurant;
+        }
+
         public Restaurant Get(int id)
         {
             return _restaurants.FirstOrDefault(r => r.Id == id);

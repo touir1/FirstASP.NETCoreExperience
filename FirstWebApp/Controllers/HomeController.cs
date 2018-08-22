@@ -8,8 +8,7 @@ namespace FirstWebApp.Controllers
         public IActionResult Index()
         {
             var model = new Restaurant() { Id = 1, Name = "My Pizza restaurant" };
-            return new ObjectResult(model);
-            //return Content("Hello from the HomeController :D");
+            return View(model);
         }
     }
 }

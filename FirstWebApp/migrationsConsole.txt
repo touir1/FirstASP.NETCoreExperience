@@ -1,0 +1,177 @@
+Microsoft Windows [version 10.0.17134.228]
+(c) 2018 Microsoft Corporation. Tous droits réservés.
+
+E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp>dotnet ef dbcontext info
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'FirstWebAppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Provider name: Microsoft.EntityFrameworkCore.SqlServer
+Database name: FirstWebApp
+Data source: (localdb)\MSSQLLocalDB
+Options: None
+
+E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp>
+E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp>
+E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp>dotnet ef dbcontext list
+FirstWebApp.Data.FirstWebAppDbContext
+
+E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp>dotnet ef migrations add InitialCreate -v
+Using project 'E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\FirstWebApp.csproj'.
+Using startup project 'E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\FirstWebApp.csproj'.
+Writing 'E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\obj\FirstWebApp.csproj.EntityFrameworkCore.targets'...
+dotnet msbuild /target:GetEFProjectMetadata /property:EFProjectMetadataFile=C:\Users\touir\AppData\Local\Temp\tmpF958.tmp /verbosity:quiet /nologo "E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\FirstWebApp.csproj"
+Writing 'E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\obj\FirstWebApp.csproj.EntityFrameworkCore.targets'...
+dotnet msbuild /target:GetEFProjectMetadata /property:EFProjectMetadataFile=C:\Users\touir\AppData\Local\Temp\tmpFDBE.tmp /verbosity:quiet /nologo "E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\FirstWebApp.csproj"
+dotnet build "E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\FirstWebApp.csproj" /verbosity:quiet /nologo
+C:\Program Files\dotnet\sdk\2.1.400\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.ObsoleteReferences.targets(33,5): warning NETSDK1059: L'outil 'Microsoft.EntityFrameworkCore.Tools.DotNet' est désormais inclus dans le kit SDK .NET Core. Des informations sur la résolution de cet avertissement sont disponibles en ligne (https://aka.ms/dotnetclitools-in-box). [E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\FirstWebApp.csproj]
+C:\Program Files\dotnet\sdk\2.1.400\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.ObsoleteReferences.targets(33,5): warning NETSDK1059: L'outil 'Microsoft.EntityFrameworkCore.Tools.DotNet' est désormais inclus dans le kit SDK .NET Core. Des informations sur la résolution de cet avertissement sont disponibles en ligne (https://aka.ms/dotnetclitools-in-box). [E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\FirstWebApp.csproj]
+
+La génération a réussi.
+
+C:\Program Files\dotnet\sdk\2.1.400\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.ObsoleteReferences.targets(33,5): warning NETSDK1059: L'outil 'Microsoft.EntityFrameworkCore.Tools.DotNet' est désormais inclus dans le kit SDK .NET Core. Des informations sur la résolution de cet avertissement sont disponibles en ligne (https://aka.ms/dotnetclitools-in-box). [E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\FirstWebApp.csproj]
+C:\Program Files\dotnet\sdk\2.1.400\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.ObsoleteReferences.targets(33,5): warning NETSDK1059: L'outil 'Microsoft.EntityFrameworkCore.Tools.DotNet' est désormais inclus dans le kit SDK .NET Core. Des informations sur la résolution de cet avertissement sont disponibles en ligne (https://aka.ms/dotnetclitools-in-box). [E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\FirstWebApp.csproj]
+    2 Avertissement(s)
+    0 Erreur(s)
+
+Temps écoulé 00:00:01.82
+dotnet exec --depsfile "E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\bin\Debug\netcoreapp2.1\FirstWebApp.deps.json" --additionalprobingpath C:\Users\touir\.nuget\packages --additionalprobingpath "C:\Program Files\dotnet\sdk\NuGetFallbackFolder" --runtimeconfig "E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\bin\Debug\netcoreapp2.1\FirstWebApp.runtimeconfig.json" "C:\Program Files\dotnet\sdk\2.1.400\DotnetTools\dotnet-ef\2.1.1\tools\netcoreapp2.1\any\tools\netcoreapp2.0\any\ef.dll" migrations add InitialCreate --assembly "E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\bin\Debug\netcoreapp2.1\FirstWebApp.dll" --startup-assembly "E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\bin\Debug\netcoreapp2.1\FirstWebApp.dll" --project-dir "E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\\" --language C# --working-dir "E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp" --verbose --root-namespace FirstWebApp
+Using assembly 'FirstWebApp'.
+Using startup assembly 'FirstWebApp'.
+Using application base 'E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\bin\Debug\netcoreapp2.1'.
+Using working directory 'E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp'.
+Using root namespace 'FirstWebApp'.
+Using project directory 'E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\'.
+Finding DbContext classes...
+Finding IDesignTimeDbContextFactory implementations...
+Finding application service provider...
+Finding IWebHost accessor...
+Using environment 'Development'.
+Using application service provider from IWebHost accessor on 'Program'.
+Found DbContext 'FirstWebAppDbContext'.
+Finding DbContext classes in the project...
+Using context 'FirstWebAppDbContext'.
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'FirstWebAppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Finding design-time services for provider 'Microsoft.EntityFrameworkCore.SqlServer'...
+Using design-time services from provider 'Microsoft.EntityFrameworkCore.SqlServer'.
+Finding design-time services referenced by assembly 'FirstWebApp'.
+No referenced design-time services were found.
+Finding IDesignTimeServices implementations in assembly 'FirstWebApp'...
+No design-time services were found.
+Writing migration to 'E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\Migrations\20180822221339_InitialCreate.cs'.
+Writing model snapshot to 'E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\Migrations\FirstWebAppDbContextModelSnapshot.cs'.
+Done. To undo this action, use 'ef migrations remove'
+
+E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp>dotnet ef database update -v
+Using project 'E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\FirstWebApp.csproj'.
+Using startup project 'E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\FirstWebApp.csproj'.
+Writing 'E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\obj\FirstWebApp.csproj.EntityFrameworkCore.targets'...
+dotnet msbuild /target:GetEFProjectMetadata /property:EFProjectMetadataFile=C:\Users\touir\AppData\Local\Temp\tmpF1D.tmp /verbosity:quiet /nologo "E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\FirstWebApp.csproj"
+Writing 'E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\obj\FirstWebApp.csproj.EntityFrameworkCore.targets'...
+dotnet msbuild /target:GetEFProjectMetadata /property:EFProjectMetadataFile=C:\Users\touir\AppData\Local\Temp\tmp1400.tmp /verbosity:quiet /nologo "E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\FirstWebApp.csproj"
+dotnet build "E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\FirstWebApp.csproj" /verbosity:quiet /nologo
+C:\Program Files\dotnet\sdk\2.1.400\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.ObsoleteReferences.targets(33,5): warning NETSDK1059: L'outil 'Microsoft.EntityFrameworkCore.Tools.DotNet' est désormais inclus dans le kit SDK .NET Core. Des informations sur la résolution de cet avertissement sont disponibles en ligne (https://aka.ms/dotnetclitools-in-box). [E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\FirstWebApp.csproj]
+C:\Program Files\dotnet\sdk\2.1.400\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.ObsoleteReferences.targets(33,5): warning NETSDK1059: L'outil 'Microsoft.EntityFrameworkCore.Tools.DotNet' est désormais inclus dans le kit SDK .NET Core. Des informations sur la résolution de cet avertissement sont disponibles en ligne (https://aka.ms/dotnetclitools-in-box). [E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\FirstWebApp.csproj]
+
+La génération a réussi.
+
+C:\Program Files\dotnet\sdk\2.1.400\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.ObsoleteReferences.targets(33,5): warning NETSDK1059: L'outil 'Microsoft.EntityFrameworkCore.Tools.DotNet' est désormais inclus dans le kit SDK .NET Core. Des informations sur la résolution de cet avertissement sont disponibles en ligne (https://aka.ms/dotnetclitools-in-box). [E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\FirstWebApp.csproj]
+C:\Program Files\dotnet\sdk\2.1.400\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.ObsoleteReferences.targets(33,5): warning NETSDK1059: L'outil 'Microsoft.EntityFrameworkCore.Tools.DotNet' est désormais inclus dans le kit SDK .NET Core. Des informations sur la résolution de cet avertissement sont disponibles en ligne (https://aka.ms/dotnetclitools-in-box). [E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\FirstWebApp.csproj]
+    2 Avertissement(s)
+    0 Erreur(s)
+
+Temps écoulé 00:00:12.50
+dotnet exec --depsfile "E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\bin\Debug\netcoreapp2.1\FirstWebApp.deps.json" --additionalprobingpath C:\Users\touir\.nuget\packages --additionalprobingpath "C:\Program Files\dotnet\sdk\NuGetFallbackFolder" --runtimeconfig "E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\bin\Debug\netcoreapp2.1\FirstWebApp.runtimeconfig.json" "C:\Program Files\dotnet\sdk\2.1.400\DotnetTools\dotnet-ef\2.1.1\tools\netcoreapp2.1\any\tools\netcoreapp2.0\any\ef.dll" database update --assembly "E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\bin\Debug\netcoreapp2.1\FirstWebApp.dll" --startup-assembly "E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\bin\Debug\netcoreapp2.1\FirstWebApp.dll" --project-dir "E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\\" --language C# --working-dir "E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp" --verbose --root-namespace FirstWebApp
+Using assembly 'FirstWebApp'.
+Using startup assembly 'FirstWebApp'.
+Using application base 'E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\bin\Debug\netcoreapp2.1'.
+Using working directory 'E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp'.
+Using root namespace 'FirstWebApp'.
+Using project directory 'E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp\'.
+Finding DbContext classes...
+Finding IDesignTimeDbContextFactory implementations...
+Finding application service provider...
+Finding IWebHost accessor...
+Using environment 'Development'.
+Using application service provider from IWebHost accessor on 'Program'.
+Found DbContext 'FirstWebAppDbContext'.
+Finding DbContext classes in the project...
+Using context 'FirstWebAppDbContext'.
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'FirstWebAppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Finding design-time services for provider 'Microsoft.EntityFrameworkCore.SqlServer'...
+Using design-time services from provider 'Microsoft.EntityFrameworkCore.SqlServer'.
+Finding design-time services referenced by assembly 'FirstWebApp'.
+No referenced design-time services were found.
+Finding IDesignTimeServices implementations in assembly 'FirstWebApp'...
+No design-time services were found.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2,889ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+      CREATE DATABASE [FirstWebApp];
+Executed DbCommand (2,889ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [FirstWebApp];
+infoExecuted DbCommand (1,145ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [FirstWebApp] SET READ_COMMITTED_SNAPSHOT ON;
+END;: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1,145ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+      IF SERVERPROPERTY('EngineEdition') <> 5
+      BEGIN
+          ALTER DATABASE [FirstWebApp] SET READ_COMMITTED_SNAPSHOT ON;
+      END;
+
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (110ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [__EFMigrationsHistory] (
+          [MigrationId] nvarchar(150) NOT NULL,
+          [ProductVersion] nvarchar(32) NOT NULL,
+          CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+      );
+Executed DbCommand (110ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+infoExecuted DbCommand (179ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (179ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+
+infoExecuted DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [MigrationId], [ProductVersion]
+      FROM [__EFMigrationsHistory]
+      ORDER BY [MigrationId];
+
+infoApplying migration '20180822221339_InitialCreate'.
+: Microsoft.EntityFrameworkCore.Migrations[20402]
+      Applying migration '20180822221339_InitialCreate'.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (168ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [Restaurants] (
+          [Id] int NOT NULL IDENTITY,
+          [Name] nvarchar(80) NOT NULL,
+          [Cuisine] int NOT NULL,
+          CONSTRAINT [PK_Restaurants] PRIMARY KEY ([Id])
+      );
+Executed DbCommand (168ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Restaurants] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(80) NOT NULL,
+    [Cuisine] int NOT NULL,
+    CONSTRAINT [PK_Restaurants] PRIMARY KEY ([Id])
+);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+      VALUES (N'20180822221339_InitialCreate', N'2.1.1-rtm-30846');
+Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20180822221339_InitialCreate', N'2.1.1-rtm-30846');
+Done.
+
+E:\To Copy\Projects\ASP.NET\FirstASP.NETCoreExperience\FirstWebApp>

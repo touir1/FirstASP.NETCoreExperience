@@ -45,12 +45,12 @@ namespace FirstWebApp
 
             app.UseMvc(ConfigureRoutes);
 
-            app.Run(async (context) =>
+            /*app.Run(async (context) =>
             {
                 var greeting = greeter.GetGreetingOfTheDay();
                 context.Response.ContentType = "text/plain";
                 await context.Response.WriteAsync(greeting);
-            });
+            });*/
         }
 
         private void ConfigureRoutes(IRouteBuilder routeBuilder)

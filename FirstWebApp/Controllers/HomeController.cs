@@ -1,10 +1,12 @@
 ﻿using FirstWebApp.Models;
 using FirstWebApp.Services;
 using FirstWebApp.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FirstWebApp.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private IRestaurantData _restaurantData;
@@ -16,6 +18,7 @@ namespace FirstWebApp.Controllers
             _greeter = greeter;
         }
 
+        [AllowAnonymous]
         public IActionResult Index()
         {
             var model = new HomeIndexViewModel();

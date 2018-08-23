@@ -4,11 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using FirstWebApp.Models;
 using FirstWebApp.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace FirstWebApp.Pages.Restaurants
 {
+    [Authorize]
     public class EditModel : PageModel
     {
         private IRestaurantData _restaurantData;

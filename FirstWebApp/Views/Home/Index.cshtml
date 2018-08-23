@@ -1,24 +1,26 @@
 ﻿@model FirstWebApp.ViewModels.HomeIndexViewModel
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title></title>
-</head>
-<body>
-    <h1>Hello !</h1>
-    <h2>@Model.CurrentMessage</h2>
-    <table>
-        @foreach (var restaurant in Model.Restaurants)
-        {
-            <tr>
-                <td>@restaurant.Id</td>
-                <td>@restaurant.Name</td>
-                <td><a href="/home/details/@restaurant.Id">A HTML Tag</a></td>
-                <td>@Html.ActionLink("ActionLink","Details",new { id=restaurant.Id})</td>
-                <td><a asp-action="Details" asp-route-id="@restaurant.Id">Tag helper</a></td>
-            </tr>
-        }
-    </table>
-    <a asp-action="Create">Add Restaurant</a>
-</body>
-</html>
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Hello !</h1>
+<h2>All Restaurants</h2>
+<table>
+    @foreach (var restaurant in Model.Restaurants)
+    {
+        <tr>
+            <td>@restaurant.Id</td>
+            <td>@restaurant.Name</td>
+            <td><a href="/home/details/@restaurant.Id">A HTML Tag</a></td>
+            <td>@Html.ActionLink("ActionLink", "Details", new { id = restaurant.Id })</td>
+            <td><a asp-action="Details" asp-route-id="@restaurant.Id">Tag helper</a></td>
+        </tr>
+    }
+</table>
+<a asp-action="Create">Add Restaurant</a>
+
+@section footer {
+    @Model.CurrentMessage
+}

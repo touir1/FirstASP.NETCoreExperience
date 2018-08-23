@@ -1,0 +1,15 @@
+﻿@model  Restaurant
+
+<section>
+    <h3>@Model.Name</h3>
+    <div>
+        Cuisine: @Model.Cuisine
+    </div>
+
+    @*<td><a href="/home/details/@restaurant.Id">A HTML Tag</a></td>
+        <td>@Html.ActionLink("ActionLink", "Details", new { id = restaurant.Id })</td>
+        <td><a asp-action="Details" asp-route-id="@restaurant.Id">Tag helper</a></td>*@
+
+    <td><a asp-action="Details" asp-route-id="@Model.Id">More</a></td>
+    <td><a asp-page="/Restaurants/Edit" asp-route-id="@Model.Id">Edit</a></td>
+</section>

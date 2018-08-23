@@ -9,13 +9,15 @@
 <table>
     @foreach (var restaurant in Model.Restaurants)
     {
-        <tr>
-            <td>@restaurant.Id</td>
-            <td>@restaurant.Name</td>
-            <td><a href="/home/details/@restaurant.Id">A HTML Tag</a></td>
-            <td>@Html.ActionLink("ActionLink", "Details", new { id = restaurant.Id })</td>
-            <td><a asp-action="Details" asp-route-id="@restaurant.Id">Tag helper</a></td>
-        </tr>
+    <tr>
+        <td>@restaurant.Id</td>
+        <td>@restaurant.Name</td>
+        @*<td><a href="/home/details/@restaurant.Id">A HTML Tag</a></td>
+        <td>@Html.ActionLink("ActionLink", "Details", new { id = restaurant.Id })</td>
+        <td><a asp-action="Details" asp-route-id="@restaurant.Id">Tag helper</a></td>*@
+        <td><a asp-action="Details" asp-route-id="@restaurant.Id">More</a></td>
+        <td><a asp-page="/Restaurants/Edit" asp-route-id="@restaurant.Id">Edit</a></td>
+    </tr>
     }
 </table>
 <a asp-action="Create">Add Restaurant</a>

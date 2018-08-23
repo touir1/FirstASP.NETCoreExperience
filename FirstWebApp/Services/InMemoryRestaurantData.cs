@@ -35,5 +35,14 @@ namespace FirstWebApp.Services
         {
             return _restaurants.OrderBy(r => r.Name);
         }
+
+        public Restaurant Update(Restaurant restaurant)
+        {
+            var oldRestaurant = _restaurants.FirstOrDefault(r => r.Id == restaurant.Id);
+            oldRestaurant.Name = restaurant.Name;
+            oldRestaurant.Cuisine = restaurant.Cuisine;
+
+            return oldRestaurant;
+        }
     }
 }

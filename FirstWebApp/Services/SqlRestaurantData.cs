@@ -2,6 +2,7 @@
 using System.Linq;
 using FirstWebApp.Data;
 using FirstWebApp.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace FirstWebApp.Services
 {
@@ -30,6 +31,14 @@ namespace FirstWebApp.Services
         public IEnumerable<Restaurant> GetAll()
         {
             return _context.Restaurants.OrderBy(r => r.Name);
+        }
+
+        public Restaurant Update(Restaurant restaurant)
+        {
+            _context.Attach(restaurant).State = EntityState.Modified;
+            _context.SaveChanges();
+
+            return restaurant;
         }
     }
 }

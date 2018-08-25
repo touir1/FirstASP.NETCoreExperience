@@ -58,6 +58,8 @@ namespace FirstWebApp
 
             app.UseStaticFiles();
 
+            app.UseNodeModules(env.ContentRootPath);
+
             app.UseAuthentication();
 
             app.UseMvc(ConfigureRoutes);

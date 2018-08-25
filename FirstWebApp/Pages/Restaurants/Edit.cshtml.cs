@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using FirstWebApp.Models;
 using FirstWebApp.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -26,9 +22,9 @@ namespace FirstWebApp.Pages.Restaurants
         public IActionResult OnGet(int id)
         {
             Restaurant = _restaurantData.Get(id);
-            if(Restaurant == null)
+            if (Restaurant == null)
             {
-                return RedirectToAction("Index","Home");
+                return RedirectToAction("Index", "Home");
             }
             return Page();
         }
